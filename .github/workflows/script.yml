@@ -24,7 +24,7 @@ jobs:
 
       - id: run_sctipt 
         name: Run a Python script from action
-        run: python .github/Python-Action/example.py
+        run: python example.py
         shell: bash 
 
       - id: commit

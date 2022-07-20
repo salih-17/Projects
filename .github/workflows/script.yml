@@ -10,7 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      
+      - id : repo
+        name: Repo Checkout
+        uses: actions/checkout@v2
+        
       - id: python
         name: Python Setup & Packages Installation
         uses: actions/setup-python@v2

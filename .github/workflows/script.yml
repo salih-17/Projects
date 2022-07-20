@@ -10,21 +10,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - id : repo
-        name: Repo Checkout
+      
+      - name: Repo Checkout
         uses: actions/checkout@v2
         
-      - id: python
-        name: Python Setup & Packages Installation
+      
+      - name: setup python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
           cache: 'pip'
       - run: pip install -r requirements.txt
 
-      - id: run_sctipt 
-        name: Run a Python script from action
-        run: python execute example.py
+      - name: execute py script
+        run: python example.py
         shell: bash 
 
       - id: commit

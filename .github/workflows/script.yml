@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.9'
           cache: 'pip'
-      - run: pip install -r .github/Python-Action/requirements.txt
+      - run: pip install -r requirements.txt
 
       - id: run_sctipt 
         name: Run a Python script from action
